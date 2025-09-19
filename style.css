@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sm-dark: 0 0% 10%;      /* Hitam pekat */
+  --sm-white: 0 0% 100%;    /* Putih */
+  --sm-primary: 0 0% 40%;   /* Abu-abu medium */
+  --sm-primary-contrast: 0 0% 100%;
+  --sm-secondary: 0 0% 80%; /* Abu-abu terang */
+  --sm-secondary-contrast: 0 0% 10%;
+  --sm-muted: 0 0% 94%;
+  --sm-muted-contrast: 0 0% 40%;
+  --sm-gray: 0 0% 65%;
+  --sm-gray-contrast: 0 0% 100%;
+  --sm-info: 0 0% 85%;
+  --sm-info-contrast: 0 0% 10%;
+  --sm-danger: 0 0% 30%;
+  --sm-danger-contrast: 0 0% 100%;
+  --sm-nav-bg: 0 0% 100%;
+  --sm-nav-inactive: 0 0% 20%;
+  --sm-nav-active: 0 0% 40%;
+}
+
+.markdown em {
+  color: black;
+}
+
+.markdown ul,
+.markdown ol {
+  list-style: none;
+  padding-left: 2rem;
+  margin-bottom: 0;
+}
+
+.markdown ul li,
+.markdown ol li {
+  margin-bottom: 0.5rem;
+}
+
+.markdown ol li::before {
+  content: url('/icons/check-circle-duotone.svg');
+  position: absolute;
+  transform: translateX(-2rem);
+  filter: grayscale(100%);
+}
+
+.markdown ul li::before {
+  content: url('/icons/x-circle-duotone.svg');
+  position: absolute;
+  transform: translateX(-2rem);
+  filter: grayscale(100%);
+}
+
+.markdown blockquote ol {
+  list-style: decimal;
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.markdown blockquote ul {
+  list-style: disc;
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.markdown blockquote ol li::before,
+.markdown blockquote ul li::before {
+  content: "";
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pagination-container button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination-container button:hover {
+  background-color: #e0e0e0;
+  color: #000000;
+}
+
+.pagination-container button.active {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.pagination-container button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
